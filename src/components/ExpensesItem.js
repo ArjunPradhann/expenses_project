@@ -1,15 +1,17 @@
-import './ExpenseItem.css';
+import "./ExpensesItem.css";
 
-const ExpenseItem = (props) => {
-    return (
-        <div clasName= "expense-item">
-            <div>{props.date}</div>
-            <div clasName="expense-item__description">
-                <h2>{props.title}</h2>
-                <div clasName="expense-item__price">{props.amount}</div>
-            </div>
-        </div>  
-    );
-}
+const ExpensesItem = (props) => {
+  return (
+    <>
+      <div clasName="expense-item">
+        <div>{props.Date.toISOString()}</div>
+        <div clasName="expense-item__description">
+          <h2>{props.Title}</h2>
+          <div clasName="expense-item__price">{props.Amount}</div>
+        </div>
+      </div>
+    </>
+  );
+};
 
-export default ExpenseItem;
+export default ExpensesItem;
